@@ -62,7 +62,7 @@ export default {
 .box{
   width: 300px;
   height: 300px;
-  background-color:transparent;
+  background-color:#33b5c6;
 }
 .box .item{
   width: 300px;

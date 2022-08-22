@@ -1,6 +1,6 @@
 <template>
 
-    <div class="box">
+    <div class="box wiggle-animation growing">
       <div class="item" :class="{ shake: disabled }">
         cpu
         <div :class="{ shake: disabled }">
@@ -34,6 +34,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+@import '../styles/animation.css';
+
+
 .shake {
   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
@@ -62,7 +66,7 @@ export default {
 .box{
   width: 300px;
   height: 300px;
-  background-color:transparent;
+  background-color:#e87bc2;
 }
 .box .item{
   width: 300px;
