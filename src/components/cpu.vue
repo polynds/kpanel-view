@@ -1,6 +1,6 @@
 <template>
 
-    <div class="box wiggle-animation growing">
+    <div class="box cpu-move-animation">
       <div class="item" :class="{ shake: disabled }">
         cpu
         <div :class="{ shake: disabled }">
@@ -32,12 +32,32 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+.cpu-move-animation {
+  animation-name: growing, cpu-move, wiggle;
+  animation-duration: 1.3s, 1.3s, 1.3s;
+  animation-delay: 0s, 1.3s, 2.6s;
+  animation-iteration-count: 1, 1, 1;
+  animation-fill-mode: forwards, forwards, forwards;
+}
+@keyframes cpu-move {
+  0% {
+    position: fixed;
+    top: 60%;
+    left: calc(50% - 300px);
+    right: calc(50% - 300px);
+    z-index: 9999;
+  }
+  100% {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+  }
+}
+</style>
+
 <style scoped>
-
-@import '../styles/animation.css';
-
-
 .shake {
   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);

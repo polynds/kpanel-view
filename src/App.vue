@@ -40,34 +40,8 @@ export default {
 </script>
 
 <style>
-/*body {*/
-/*  direction: ltr;*/
-/*}*/
-
-.flex {
-  display: -webkit-flex;
-  display: flex;
-}
-
-.flex-direc-row {
-  -webkit-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.flex-direc-column {
-  -webkit-flex-direction: column;
-  flex-direction: column;
-}
-
-.jc-sa{
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-}
-
-.jc-ct{
-  -webkit-justify-content: center;
-  justify-content: center;
-}
+@import 'styles/animation.css';
+@import 'styles/common.css';
 
 .container {
   min-width: 1000px;

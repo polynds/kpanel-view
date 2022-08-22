@@ -1,14 +1,27 @@
 
+@keyframes growing {
+  0% {
+    position: fixed;
+    top: 60%;
+    left: calc(50% - 300px);
+    right: calc(50% - 300px);
+    z-index: 9999;
 
+    width: 10px;
+    height: 10px;
+    border-radius: 20%;
+  }
+  100% {
+    position: fixed;
+    top: 60%;
+    left: calc(50% - 300px);
+    right: calc(50% - 300px);
+    z-index: 9999;
 
-
-.growing{
-  transition: font-size 3s, color 2s;
-}
-
-
-.wiggle-animation{
-  animation: wiggle 4s linear 1s;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+  }
 }
 
 @keyframes wiggle {
