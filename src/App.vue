@@ -57,7 +57,8 @@ export default {
   -webkit-flex: 2;
   flex: 2;
   /*background-color: aqua;*/
-  min-width: 310px;
+  min-width: 250px;
+  min-height: 1000px;
 }
 
 .plugin-center {
@@ -66,18 +67,20 @@ export default {
   width: 100%;
   height: 100%;
   /*background-color: blue;*/
+  min-height: 1000px;
 }
 
 .plugin-right {
   -webkit-flex: 2;
   flex: 2;
   /*background-color: brown;*/
-  min-width: 310px;
+  min-width: 250px;
+  min-height: 1000px;
 }
 
 .plugin-item {
-  width: 310px;
-  height: 310px;
+  width: 250px;
+  height: 250px;
 }
 
 #app {

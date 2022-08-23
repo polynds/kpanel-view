@@ -49,7 +49,7 @@ export default {
   }
   100% {
     position: fixed;
-    top: 620px;
+    top: 630px;
     left: 10px;
     z-index: 9999;
   }

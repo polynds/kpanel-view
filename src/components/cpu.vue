@@ -84,13 +84,13 @@ export default {
 }
 
 .box{
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   background-color:#e87bc2;
 }
 .box .item{
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   border: 1px solid #2c3e50;
 }
 </style>

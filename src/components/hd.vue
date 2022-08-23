@@ -50,7 +50,7 @@ export default {
   }
   100% {
     position: fixed;
-    top: 310px;
+    top: 320px;
     left: 10px;
     z-index: 9999;
   }
