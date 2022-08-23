@@ -1,19 +1,38 @@
 <template>
-  <div class="flex jc-ct container" id="app">
-    <div class="plugin flex flex-direc-column plugin-left">
-      <cpu class="plugin-item"/>
-      <hd class="plugin-item"/>
-      <mem class="plugin-item"/>
+  <div class="container" id="app">
+    <div class="plugin plugin-left">
+      <cpu class="plugin-item" :anima="cpu_anima"/>
+      <hd class="plugin-item" :anima="hd_anima"/>
+      <mem class="plugin-item" :anima="mem_anima"/>
     </div>
-    <div class="plugin flex flex-direc-column plugin-center">
+    <div class="plugin plugin-center">
       <terminal class="plugin-center"/>
     </div>
-    <div class="plugin flex flex-direc-column plugin-right">
-      <net class="plugin-item"/>
-      <task class="plugin-item"/>
-      <pluginTime class="plugin-item"/>
+    <div class="plugin plugin-right">
+      <net class="plugin-item" :anima="net_anima"/>
+      <task class="plugin-item" :anima="pluginTime_anima"/>
+      <pluginTime class="plugin-item" :anima="task_anima"/>
     </div>
   </div>
+
+
+  <!--  <div class="flex jc-ct container" id="app">-->
+  <!--    <div class="plugin flex flex-direc-column plugin-left">-->
+  <!--      <cpu class="plugin-item"/>-->
+  <!--      <hd class="plugin-item"/>-->
+  <!--      <mem class="plugin-item"/>-->
+  <!--    </div>-->
+  <!--    <div class="plugin flex flex-direc-column plugin-center">-->
+  <!--      <terminal class="plugin-center"/>-->
+  <!--    </div>-->
+  <!--    <div class="plugin flex flex-direc-column plugin-right">-->
+  <!--      <net class="plugin-item"/>-->
+  <!--      <task class="plugin-item"/>-->
+  <!--      <pluginTime class="plugin-item"/>-->
+  <!--    </div>-->
+  <!--  </div>-->
+
+
 </template>
 
 <script>
@@ -35,6 +54,40 @@ export default {
     task,
     pluginTime,
     terminal
+  },
+  data() {
+    return {
+      cpu_anima: false,
+      hd_anima: false,
+      mem_anima: false,
+      net_anima: false,
+      pluginTime_anima: false,
+      task_anima: false
+    };
+  },
+  mounted() {
+    this.animate();
+  },
+  methods: {
+    animate() {
+      this.cpu_anima = true;
+      let that = this;
+      setTimeout(function () {
+        that.net_anima = true;
+      }, 1500);
+      setTimeout(function () {
+        that.hd_anima = true;
+      }, 3000);
+      setTimeout(function () {
+        that.pluginTime_anima = true;
+      }, 5000);
+      setTimeout(function () {
+        that.mem_anima = true;
+      }, 7000);
+      setTimeout(function () {
+        that.task_anima = true;
+      }, 9000);
+    }
   }
 }
 </script>
@@ -46,41 +99,40 @@ export default {
 .container {
   min-width: 1000px;
   width: 100%;
-  min-height: calc(100vh - 50px);
+  display: flex;
 }
 
 .plugin {
+  /*flex-flow: column;*/
+  /*display: flex;*/
 
-}
-
-.plugin-left {
-  -webkit-flex: 2;
-  flex: 2;
-  /*background-color: aqua;*/
-  min-width: 250px;
-  min-height: 1000px;
-}
-
-.plugin-center {
-  /*-webkit-flex: 3;*/
-  /*flex: 3;*/
-  width: 100%;
-  height: 100%;
-  /*background-color: blue;*/
-  min-height: 1000px;
-}
-
-.plugin-right {
-  -webkit-flex: 2;
-  flex: 2;
-  /*background-color: brown;*/
-  min-width: 250px;
-  min-height: 1000px;
 }
 
 .plugin-item {
+  flex: 1;
+  display: flex;
+}
+
+.plugin-left {
   width: 250px;
-  height: 250px;
+  min-width: 250px;
+  float: left;
+}
+
+.plugin-center {
+  flex: 1;
+  text-align: center;
+  height: 100%;
+}
+
+.plugin-right {
+  width: 250px;
+  min-width: 250px;
+  float: right;
+}
+
+.plugin-left, .plugin-right {
+  width: 260px;
 }
 
 #app {

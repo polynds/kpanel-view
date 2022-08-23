@@ -1,45 +1,33 @@
 <template>
 
-    <div class="box cpu-move-animation">
-      <div class="item" :class="{ shake: disabled }">
-        cpu
-        <div :class="{ shake: disabled }">
-          <button @click="warnDisabled">Click me</button>
-          <span v-if="disabled">This feature is disabled!</span>
-        </div>
-
-      </div>
+  <div class="box" :class="{ cpu_move_animation:anima }">
+    <div class="item">
+      cpu
     </div>
+  </div>
 
 </template>
 
 <script>
 export default {
   name: 'cpu',
-  data () {
-    return {
-      disabled: false
-    }
+  props: ['anima'],
+  data() {
+    return {}
   },
-  methods: {
-    warnDisabled () {
-      this.disabled = true
-      setTimeout(() => {
-        this.disabled = false
-      }, 1500)
-    }
-  }
+  methods: {}
 }
 </script>
 
-<style>
-.cpu-move-animation {
+<style scoped>
+.cpu_move_animation {
   animation-name: growing, cpu-move, wiggle;
   animation-duration: 1.3s, 1.3s, 1.3s;
   animation-delay: 0s, 1.3s, 2.6s;
   animation-iteration-count: 1, 1, 1;
   animation-fill-mode: forwards, forwards, forwards;
 }
+
 @keyframes cpu-move {
   0% {
     position: fixed;
@@ -47,50 +35,13 @@ export default {
     left: calc(50% - 300px);
     right: calc(50% - 300px);
     z-index: 9999;
+    display: block;
   }
   100% {
-    position: fixed;
     top: 10px;
     left: 10px;
     z-index: 9999;
+    display: block;
   }
-}
-</style>
-
-<style scoped>
-.shake {
-  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  transform: translate3d(0, 0, 0);
-}
-
-@keyframes shake {
-  10%,
-  90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-  20%,
-  80% {
-    transform: translate3d(2px, 0, 0);
-  }
-  30%,
-  50%,
-  70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-  40%,
-  60% {
-    transform: translate3d(4px, 0, 0);
-  }
-}
-
-.box{
-  width: 100%;
-  height: 100%;
-  background-color:#e87bc2;
-}
-.box .item{
-  width: 100%;
-  height: 100%;
-  border: 1px solid #2c3e50;
 }
 </style>

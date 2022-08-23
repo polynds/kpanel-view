@@ -1,25 +1,15 @@
 
-.flex {
-  display: -webkit-flex;
+.box{
+  width: 250px;
+  height: 250px;
+  background-color:#81ade2;
+  display: none;
+}
+.box .item{
+  width: 250px;
+  height: 250px;
   display: flex;
-}
-
-.flex-direc-row {
-  -webkit-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.flex-direc-column {
-  -webkit-flex-direction: column;
-  flex-direction: column;
-}
-
-.jc-sa{
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-}
-
-.jc-ct{
-  -webkit-justify-content: center;
+  align-items: center;
   justify-content: center;
+  text-align: justify;
 }
