@@ -12,7 +12,7 @@
 export default {
   name: 'pluginTime',
   props: ['anima'],
-  data() {
+  data () {
     return {}
   },
   methods: {}
@@ -43,4 +43,3 @@ export default {
   }
 }
 </style>
-

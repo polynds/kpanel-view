@@ -12,7 +12,7 @@
 export default {
   name: 'mem',
   props: ['anima'],
-  data() {
+  data () {
     return {}
   },
   methods: {}

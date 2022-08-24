@@ -12,7 +12,7 @@
 export default {
   name: 'hd',
   props: ['anima'],
-  data() {
+  data () {
     return {}
   },
   methods: {}

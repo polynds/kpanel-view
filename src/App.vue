@@ -14,8 +14,6 @@
       <pluginTime class="plugin-item" :anima="task_anima"/>
     </div>
   </div>
-
-
   <!--  <div class="flex jc-ct container" id="app">-->
   <!--    <div class="plugin flex flex-direc-column plugin-left">-->
   <!--      <cpu class="plugin-item"/>-->
@@ -31,8 +29,6 @@
   <!--      <pluginTime class="plugin-item"/>-->
   <!--    </div>-->
   <!--  </div>-->
-
-
 </template>
 
 <script>
@@ -55,7 +51,7 @@ export default {
     pluginTime,
     terminal
   },
-  data() {
+  data () {
     return {
       cpu_anima: false,
       hd_anima: false,
@@ -63,30 +59,30 @@ export default {
       net_anima: false,
       pluginTime_anima: false,
       task_anima: false
-    };
+    }
   },
-  mounted() {
-    this.animate();
+  mounted () {
+    this.animate()
   },
   methods: {
-    animate() {
-      this.cpu_anima = true;
-      let that = this;
+    animate () {
+      this.cpu_anima = true
+      let that = this
       setTimeout(function () {
-        that.net_anima = true;
-      }, 1500);
+        that.net_anima = true
+      }, 1500)
       setTimeout(function () {
-        that.hd_anima = true;
-      }, 3000);
+        that.hd_anima = true
+      }, 3000)
       setTimeout(function () {
-        that.pluginTime_anima = true;
-      }, 5000);
+        that.pluginTime_anima = true
+      }, 5000)
       setTimeout(function () {
-        that.mem_anima = true;
-      }, 7000);
+        that.mem_anima = true
+      }, 7000)
       setTimeout(function () {
-        that.task_anima = true;
-      }, 9000);
+        that.task_anima = true
+      }, 9000)
     }
   }
 }

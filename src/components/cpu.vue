@@ -12,7 +12,7 @@
 export default {
   name: 'cpu',
   props: ['anima'],
-  data() {
+  data () {
     return {}
   },
   methods: {}

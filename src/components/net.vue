@@ -12,7 +12,7 @@
 export default {
   name: 'net',
   props: ['anima'],
-  data() {
+  data () {
     return {}
   },
   methods: {}

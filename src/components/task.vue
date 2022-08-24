@@ -12,7 +12,7 @@
 export default {
   name: 'task',
   props: ['anima'],
-  data() {
+  data () {
     return {}
   },
   methods: {}
